@@ -1,0 +1,74 @@
+﻿
+@{
+    //dynamic shape http://www.ideliverable.com/blog/a-closer-look-at-content-types-drivers-shapes-and-placement
+
+    Style.Include("typography.css").AtHead();
+    Style.Include("reset.css").AtHead();
+    Style.Include("screen.css").AtHead();
+    Style.Include("reset.css").AtHead();
+    //Style.Include("print.css").AtHead();
+
+    Script.Include("object-assign-pollyfill.js").AtHead();
+    Script.Include("jquery-1.8.0.min.js").AtHead();
+    Script.Include("jquery.slideto.min.js").AtHead();
+    Script.Include("jquery.wiggle.min.js").AtHead();
+    Script.Include("jquery.ba-bbq.min.js").AtHead();
+    Script.Include("handlebars-4.0.5.js").AtHead();
+    Script.Include("lodash.min.js").AtHead();
+    Script.Include("backbone-min.js").AtHead();
+    Script.Include("swagger-ui.js").AtHead();
+    Script.Include("highlight.9.1.0.pack.js").AtHead();
+    Script.Include("highlight.9.1.0.pack_extended.js").AtHead();
+    Script.Include("jsoneditor.min.js").AtHead();
+    Script.Include("marked.js").AtHead();
+    Script.Include("swagger-oauth.js").AtHead();
+    Script.Include("swagger-main.js").AtHead();
+
+    var viewPath = this.VirtualPath;
+    var imageRoot = GetBasePathFromViewPath("images", viewPath);
+
+}
+
+@functions {
+    string GetBasePathFromViewPath(string resourceType, string viewPath)
+    {
+        if (String.IsNullOrEmpty(viewPath))
+        {
+            return null;
+        }
+        string basePath = null;
+        var viewsPartIndex = viewPath.IndexOf("/Views", StringComparison.OrdinalIgnoreCase);
+        if (viewsPartIndex >= 0)
+        {
+            basePath = viewPath.Substring(0, viewsPartIndex + 1) + resourceType;
+        }
+        return basePath;
+    }
+}
+<!DOCTYPE html>
+<html lang="@WorkContext.CurrentCulture" class="@Html.ClassForPage()">
+<head>
+    <meta charset="utf-8" />
+    <title>swagger</title>
+    <!-- defined layout head here to render CSS, JavaScript -->
+    @Display(Layout.Head)
+</head>
+<body class="swagger-section">
+    <div id='header'>
+        <div class="swagger-ui-wrap">
+            <a id="logo" href="http://swagger.io">
+                <img class="logo__img" alt="swagger" height="30" width="30" src="@Url.Content(Flurl.Url.Combine(imageRoot, "logo_small.png"))"/>
+                <span class="logo__title">swagger</span>
+            </a>
+            <form id='api_selector'>
+                <div class='input'><input placeholder="http://example.com/api" id="input_baseUrl" name="baseUrl" type="text" /></div>
+                <div id='auth_container'></div>
+                <div class='input'><a id="explore" class="header__btn" href="#" data-sw-translate>Explore</a></div>
+            </form>
+        </div>
+    </div>
+
+    <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
+    <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
+</body>
+</html>
