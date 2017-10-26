@@ -18,6 +18,7 @@ namespace CodeSanook.Swagger
 
         public IEnumerable<RouteDescriptor> GetRoutes()
         {
+            const string area = "CodeSanook.Swagger";
             return new[] {
 
                 new RouteDescriptor {
@@ -26,30 +27,30 @@ namespace CodeSanook.Swagger
                     Route = new Route(
                         "swagger",
                         new RouteValueDictionary {
-                            {"area", "CodeSanook.Swagger"},
-                            {"controller", "Swagger"},
+                            {"area", area},
+                            {"controller", "SwaggerUi"},
                             {"action", "Index"}
                         },
                         new RouteValueDictionary(),
                         new RouteValueDictionary {
-                            {"area", "CodeSanook.Swagger"}
+                            {"area", area}
                         },
                         new MvcRouteHandler())
                 },
 
                 new RouteDescriptor {
                     Name = "SwaggerDoc",
-                    Priority = 9,
+                    Priority = 100,
                     Route = new Route(
-                        "swagger/doc/{version}",
+                        "swagger/doc/{apiVersion}",
                         new RouteValueDictionary {
-                            {"area", "CodeSanook.Swagger"},
-                            {"controller", "Swagger"},
+                            {"area", area},
+                            {"controller", "SwaggerUi"},
                             {"action", "GenerateDocument"}
                         },
                         new RouteValueDictionary(),
                         new RouteValueDictionary {
-                            {"area", "CodeSanook.Swagger"}
+                            {"area", area}
                         },
                         new MvcRouteHandler())
                 }

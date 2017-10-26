@@ -32,30 +32,31 @@ namespace CodeSanook.Swagger.Controllers
             T = NullLocalizer.Instance;
         }
 
-        // GET: Swagger
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Docs(string apiVersion)
+        public ActionResult GenerateDocument(string apiVersion)
         {
             var setting = repository.Get(s => s.ApiVersion == apiVersion);
+
+            var assemblyNames = AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetName().Name).OrderBy(a=>a).ToArray();
             var assembly = AppDomain.CurrentDomain.GetAssemblies()
-                .SingleOrDefault(a => setting.ControllerNamespace.Contains(a.FullName));
+                .SingleOrDefault(a => setting.ControllerNamespace.Contains(a.GetName().Name));
 
-            assembly.GetTypes().Where(t => t.IsSubclassOf(typeof(ApiController)));
-            var typeFullName = "CaptureTheFracture.Api.V1.Controllers.UsersController";
-            var type = assembly.GetType(typeFullName);
+            var controllers = assembly.GetTypes()
+                .Where(t => t.IsSubclassOf(typeof(ApiController)) 
+                && t.Namespace == setting.ControllerNamespace);
 
-            Type[] controllers = new[] { type };
             var settings = new WebApiToSwaggerGeneratorSettings
             {
                 DefaultUrlTemplate = setting.DefaultUrlTemplate
             };
 
             var generator = new WebApiToSwaggerGenerator(settings);
-            var document = Task.Run(async () => await generator.GenerateForControllersAsync(controllers))
+            var document = Task.Run(async () =>
+            await generator.GenerateForControllersAsync(controllers))
                 .GetAwaiter().GetResult();
 
             var json = document.ToJson();

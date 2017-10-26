@@ -185,7 +185,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Views\Swagger\Index.cshtml" />
+    <Content Include="Views\SwaggerUi\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\DroidSans-Bold.ttf" />
