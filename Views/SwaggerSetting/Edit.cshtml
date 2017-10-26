@@ -1,0 +1,27 @@
+﻿@model CodeSanook.Swagger.Models.SwaggerSetting
+
+@{ Layout.Title = T("Edit Setting").ToString(); }
+
+@using (Html.BeginFormAntiForgeryPost(Url.Action("Edit")))
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <div>
+            <label for="Url">@T("API version")</label>
+            @Html.TextBoxFor(m => m.ApiVersion, new { @class = "text medium" })
+        </div>
+        <div>
+            <label for="Url">@T("Controller Namespace")</label>
+            @Html.TextBoxFor(m => m.ControllerNamespace, new { @class = "text medium" })
+        </div>
+        <div>
+            <label for="Url">@T("Default URL Template")</label>
+            @Html.TextBoxFor(m => m.DefaultUrlTemplate, new { @class = "text medium" })
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <button class="primaryAction" type="submit">@T("Save")</button>
+    </fieldset>
+}

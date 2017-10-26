@@ -1,0 +1,27 @@
+﻿@model CodeSanook.Swagger.Models.SwaggerSetting
+
+@{ Layout.Title = T("Confirm Delete").ToString(); }
+
+@using (Html.BeginFormAntiForgeryPost(Url.Action("Delete")))
+{
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <div>
+            <label for="Url">@T("API version")</label>
+            <div> @Model.ApiVersion</div>
+        </div>
+        <div>
+            <label for="Url">@T("Controller Namespace")</label>
+            <div>@Model.ControllerNamespace</div>
+        </div>
+        <div>
+            <label for="Url">@T("Default URL Template")</label>
+            <div>@Model.DefaultUrlTemplate</div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <button class="primaryAction" type="submit">@T("Delete")</button>
+    </fieldset>
+}

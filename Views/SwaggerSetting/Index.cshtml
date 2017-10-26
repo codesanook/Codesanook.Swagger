@@ -1,0 +1,38 @@
+﻿@model IEnumerable<CodeSanook.Swagger.Models.SwaggerSetting>
+
+@{ Layout.Title = T("Settings").ToString(); }
+
+<h2>@T("Swagger")</h2>
+<div class="manage">
+    @Html.ActionLink(T("Add API").Text,
+    "Add", new { }, new { @class = "button primaryAction" })
+</div>
+@using (Html.BeginFormAntiForgeryPost())
+{
+    <fieldset>
+        <table class="items">
+            <thead>
+                <tr>
+                    <th>@T("Title")</th>
+                    <th>@T("Url")</th>
+                    <th>@T("Default Url Template")</th>
+                    <th>@T("Action")</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ApiVersion</td>
+                    <td>@item.ControllerNamespace</td>
+                    <td>@item.DefaultUrlTemplate</td>
+                    <td> 
+                        @Html.ActionLink(T("Edit").ToString(), "Edit", new { id = item.Id })
+                        |
+                        @Html.ActionLink(T("Delete").ToString(), "Delete", new { id = item.Id })
+                    </td>
+
+                </tr>
+            }
+        </table>
+    </fieldset>
+}
