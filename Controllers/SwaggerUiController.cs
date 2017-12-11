@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using Orchard.Data;
 using Orchard.Logging;
 using Orchard.Localization;
+using NJsonSchema;
 
 namespace CodeSanook.Swagger.Controllers
 {
@@ -51,7 +52,8 @@ namespace CodeSanook.Swagger.Controllers
 
             var settings = new WebApiToSwaggerGeneratorSettings
             {
-                DefaultUrlTemplate = setting.DefaultUrlTemplate
+                DefaultUrlTemplate = setting.DefaultUrlTemplate,
+                DefaultPropertyNameHandling = PropertyNameHandling.CamelCase
             };
 
             var generator = new WebApiToSwaggerGenerator(settings);
