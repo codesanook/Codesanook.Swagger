@@ -1,15 +1,21 @@
-using Orchard.ContentManagement.MetaData;
-using Orchard.Core.Contents.Extensions;
 using Orchard.Data.Migration;
 using CodeSanook.Swagger.Models;
+using CodeSanook.Swagger.Handlers;
 
 namespace CodeSanook.Swagger
 {
     public class Migrations : DataMigrationImpl
     {
+        private readonly ISwaggerEventHandler swaggerEventHandler;
+
+        public Migrations(ISwaggerEventHandler swaggerEventHandler)
+        {
+            this.swaggerEventHandler = swaggerEventHandler;
+        }
+
         public int Create()
         {
-            // Creating table FacebookPageRecord 
+            //Create SwaggerSetting table
             SchemaBuilder.CreateTable(typeof(SwaggerSetting).Name,
                 table => table
                 .Column<int>("Id", c => c.PrimaryKey().Identity())
@@ -18,9 +24,8 @@ namespace CodeSanook.Swagger
                 .Column<string>("DefaultUrlTemplate")
             );
 
-            ContentDefinitionManager.AlterPartDefinition(
-                typeof(SwaggerSetting).Name, cfg => cfg.Attachable(false)
-            );
+            //Fired OnSettingTableCreated event
+            swaggerEventHandler.OnSettingTableCreated();
             return 1;
         }
     }

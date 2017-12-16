@@ -123,6 +123,7 @@
     <Compile Include="AdminMenu.cs" />
     <Compile Include="Controllers\SwaggerUiController.cs" />
     <Compile Include="Controllers\SwaggerSettingController.cs" />
+    <Compile Include="Handlers\ISwaggerEventHandler.cs" />
     <Compile Include="Migrations.cs" />
     <Compile Include="Models\SwaggerSetting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
