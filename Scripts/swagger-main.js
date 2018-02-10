@@ -3,7 +3,7 @@
   if (url && url.length > 1) {
     url = decodeURIComponent(url[1]);
   } else {
-    url = "http://petstore.swagger.io/v2/swagger.json";
+    url = location.origin  +  "/swagger/doc/1";
   }
 
   hljs.configure({
