@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="12.0">
-  <Import Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"/>
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="12.0">
+  <Import Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -16,15 +17,15 @@
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <UpgradeBackupLocation/>
-    <TargetFrameworkProfile/>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
     <UseIISExpress>false</UseIISExpress>
-    <IISExpressSSLPort/>
-    <IISExpressAnonymousAuthentication/>
-    <IISExpressWindowsAuthentication/>
-    <IISExpressUseClassicPipelineMode/>
-    <Use64BitIISExpress/>
-    <UseGlobalApplicationHostFile/>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,41 +52,41 @@
     <Reference Include="Flurl, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Flurl.2.4.0\lib\net40\Flurl.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CSharp"/>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="NJsonSchema, Version=9.7.1.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NJsonSchema.9.7.1\lib\net45\NJsonSchema.dll</HintPath>
+    <Reference Include="NJsonSchema, Version=9.10.46.0, Culture=neutral, PublicKeyToken=c2f9c3bdfae56102, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NJsonSchema.9.10.46\lib\net45\NJsonSchema.dll</HintPath>
     </Reference>
-    <Reference Include="NSwag.Core, Version=11.9.0.0, Culture=neutral, PublicKeyToken=c2d88086e098d109, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NSwag.Core.11.9.0\lib\net45\NSwag.Core.dll</HintPath>
+    <Reference Include="NSwag.Core, Version=11.17.3.0, Culture=neutral, PublicKeyToken=c2d88086e098d109, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NSwag.Core.11.17.3\lib\net45\NSwag.Core.dll</HintPath>
     </Reference>
-    <Reference Include="NSwag.SwaggerGeneration, Version=11.9.0.0, Culture=neutral, PublicKeyToken=c2d88086e098d109, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NSwag.SwaggerGeneration.11.9.0\lib\net45\NSwag.SwaggerGeneration.dll</HintPath>
+    <Reference Include="NSwag.SwaggerGeneration, Version=11.17.3.0, Culture=neutral, PublicKeyToken=c2d88086e098d109, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NSwag.SwaggerGeneration.11.17.3\lib\net45\NSwag.SwaggerGeneration.dll</HintPath>
     </Reference>
-    <Reference Include="NSwag.SwaggerGeneration.WebApi, Version=11.9.0.0, Culture=neutral, PublicKeyToken=c2d88086e098d109, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NSwag.SwaggerGeneration.WebApi.11.9.0\lib\net45\NSwag.SwaggerGeneration.WebApi.dll</HintPath>
+    <Reference Include="NSwag.SwaggerGeneration.WebApi, Version=11.17.3.0, Culture=neutral, PublicKeyToken=c2d88086e098d109, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NSwag.SwaggerGeneration.WebApi.11.17.3\lib\net45\NSwag.SwaggerGeneration.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="System"/>
-    <Reference Include="System.Data"/>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    <Reference Include="System.Net"/>
-    <Reference Include="System.Net.Http"/>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.Serialization"/>
-    <Reference Include="System.Web.ApplicationServices"/>
-    <Reference Include="System.Web.DynamicData"/>
-    <Reference Include="System.Web.Entity"/>
-    <Reference Include="System.Web.Extensions"/>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
@@ -99,12 +100,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web"/>
-    <Reference Include="System.Web.Abstractions"/>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Routing"/>
+    <Reference Include="System.Web.Routing" />
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
@@ -114,62 +115,62 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml"/>
-    <Reference Include="System.Configuration"/>
-    <Reference Include="System.Xml.Linq"/>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminMenu.cs"/>
-    <Compile Include="Controllers\SwaggerUiController.cs"/>
-    <Compile Include="Controllers\SwaggerSettingController.cs"/>
-    <Compile Include="Handlers\ISwaggerEventHandler.cs"/>
-    <Compile Include="Migrations.cs"/>
-    <Compile Include="Models\SwaggerSetting.cs"/>
-    <Compile Include="Properties\AssemblyInfo.cs"/>
-    <Compile Include="ResourceRegistration.cs"/>
-    <Compile Include="Routes.cs"/>
+    <Compile Include="AdminMenu.cs" />
+    <Compile Include="Controllers\SwaggerUiController.cs" />
+    <Compile Include="Controllers\SwaggerSettingController.cs" />
+    <Compile Include="Handlers\ISwaggerEventHandler.cs" />
+    <Compile Include="Migrations.cs" />
+    <Compile Include="Models\SwaggerSetting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceRegistration.cs" />
+    <Compile Include="Routes.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\backbone-min.js"/>
-    <Content Include="Scripts\es5-shim.js"/>
-    <Content Include="Scripts\handlebars-4.0.5.js"/>
-    <Content Include="Scripts\highlight.9.1.0.pack.js"/>
-    <Content Include="Scripts\highlight.9.1.0.pack_extended.js"/>
-    <Content Include="Scripts\jquery-1.8.0.min.js"/>
-    <Content Include="Scripts\jquery.ba-bbq.min.js"/>
-    <Content Include="Scripts\jquery.slideto.min.js"/>
-    <Content Include="Scripts\jquery.wiggle.min.js"/>
-    <Content Include="Scripts\js-yaml.min.js"/>
-    <Content Include="Scripts\jsoneditor.min.js"/>
-    <Content Include="Scripts\lodash.min.js"/>
-    <Content Include="Scripts\marked.js"/>
-    <Content Include="Scripts\object-assign-pollyfill.js"/>
-    <Content Include="Scripts\sanitize-html.min.js"/>
-    <Content Include="Scripts\swagger-main.js"/>
-    <Content Include="Scripts\swagger-oauth.js"/>
-    <Content Include="Scripts\swagger-ui.js"/>
-    <Content Include="Scripts\swagger-ui.min.js"/>
-    <Content Include="Styles\images\collapse.gif"/>
-    <Content Include="Styles\images\expand.gif"/>
-    <Content Include="Styles\images\explorer_icons.png"/>
-    <Content Include="Styles\images\favicon-16x16.png"/>
-    <Content Include="Styles\images\favicon-32x32.png"/>
-    <Content Include="Styles\images\favicon.ico"/>
-    <Content Include="Styles\images\logo_small.png"/>
-    <Content Include="Styles\images\pet_store_api.png"/>
-    <Content Include="Styles\images\throbber.gif"/>
-    <Content Include="Styles\images\wordnik_api.png"/>
-    <Content Include="Styles\print.css"/>
-    <Content Include="Styles\reset.css"/>
-    <Content Include="Styles\screen.css"/>
-    <Content Include="Styles\style.css"/>
-    <Content Include="Styles\Styles.css"/>
-    <Content Include="Styles\Styles.min.css"/>
-    <Content Include="Styles\typography.css"/>
-    <Content Include="Web.config"/>
-    <Content Include="Scripts\Web.config"/>
-    <Content Include="Styles\Web.config"/>
-    <Content Include="Module.txt"/>
+    <Content Include="Scripts\backbone-min.js" />
+    <Content Include="Scripts\es5-shim.js" />
+    <Content Include="Scripts\handlebars-4.0.5.js" />
+    <Content Include="Scripts\highlight.9.1.0.pack.js" />
+    <Content Include="Scripts\highlight.9.1.0.pack_extended.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\jquery.ba-bbq.min.js" />
+    <Content Include="Scripts\jquery.slideto.min.js" />
+    <Content Include="Scripts\jquery.wiggle.min.js" />
+    <Content Include="Scripts\js-yaml.min.js" />
+    <Content Include="Scripts\jsoneditor.min.js" />
+    <Content Include="Scripts\lodash.min.js" />
+    <Content Include="Scripts\marked.js" />
+    <Content Include="Scripts\object-assign-pollyfill.js" />
+    <Content Include="Scripts\sanitize-html.min.js" />
+    <Content Include="Scripts\swagger-main.js" />
+    <Content Include="Scripts\swagger-oauth.js" />
+    <Content Include="Scripts\swagger-ui.js" />
+    <Content Include="Scripts\swagger-ui.min.js" />
+    <Content Include="Styles\images\collapse.gif" />
+    <Content Include="Styles\images\expand.gif" />
+    <Content Include="Styles\images\explorer_icons.png" />
+    <Content Include="Styles\images\favicon-16x16.png" />
+    <Content Include="Styles\images\favicon-32x32.png" />
+    <Content Include="Styles\images\favicon.ico" />
+    <Content Include="Styles\images\logo_small.png" />
+    <Content Include="Styles\images\pet_store_api.png" />
+    <Content Include="Styles\images\throbber.gif" />
+    <Content Include="Styles\images\wordnik_api.png" />
+    <Content Include="Styles\print.css" />
+    <Content Include="Styles\reset.css" />
+    <Content Include="Styles\screen.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\Styles.css" />
+    <Content Include="Styles\Styles.min.css" />
+    <Content Include="Styles\typography.css" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="Styles\Web.config" />
+    <Content Include="Module.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
@@ -183,30 +184,30 @@
       <Private>false</Private>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup/>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="Views\SwaggerUi\Index.cshtml"/>
+    <Content Include="Views\SwaggerUi\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\DroidSans-Bold.ttf"/>
+    <Content Include="fonts\DroidSans-Bold.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\DroidSans.ttf"/>
+    <Content Include="fonts\DroidSans.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config"/>
-    <Content Include="Views\SwaggerSetting\Index.cshtml"/>
-    <Content Include="Views\SwaggerSetting\Add.cshtml"/>
-    <Content Include="Views\SwaggerSetting\Edit.cshtml"/>
-    <Content Include="Views\SwaggerSetting\Delete.cshtml"/>
+    <None Include="packages.config" />
+    <Content Include="Views\SwaggerSetting\Index.cshtml" />
+    <Content Include="Views\SwaggerSetting\Add.cshtml" />
+    <Content Include="Views\SwaggerSetting\Edit.cshtml" />
+    <Content Include="Views\SwaggerSetting\Delete.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets"/>
-  <Import Condition="'$(VSToolsPath)' != ''" Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets"/>
-  <Import Condition="false" Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets"/>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Condition="'$(VSToolsPath)' != ''" Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Condition="false" Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -224,7 +225,7 @@
     -->
   </Target>
   <Target Condition="'$(MvcBuildViews)'=='true'" Name="AfterBuildCompiler">
-    <AspNetCompiler PhysicalPath="$(ProjectDir)\..\$(ProjectName)" VirtualPath="temp"/>
+    <AspNetCompiler PhysicalPath="$(ProjectDir)\..\$(ProjectName)" VirtualPath="temp" />
   </Target>
   <ProjectExtensions>
     <VisualStudio>
