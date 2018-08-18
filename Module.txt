@@ -1,10 +1,8 @@
 ﻿Name: CodeSanook.Swagger
 AntiForgery: enabled
-Author: The Orchard Team
-Website: http://orchardproject.net
+Author: Aaron
+Website: http://codesanook.com
 Version: 1.0
 OrchardVersion: 1.0
-Description: Description for the module
-Features:
-    CodeSanook.Swagger:
-        Description: Description for feature CodeSanook.Swagger.
+Description: Swagger module for Orchard
+Dependencies: CodeSanook.Common
