@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Orchard.Mvc.Routes;
 
-namespace CodeSanook.Swagger
+namespace Codesanook.Swagger
 {
     public class Routes : IRouteProvider
     {

@@ -1,4 +1,4 @@
-﻿using CodeSanook.Swagger.Models;
+﻿using Codesanook.Swagger.Models;
 using Orchard;
 using Orchard.Data;
 using Orchard.Localization;
@@ -9,7 +9,7 @@ using Orchard.UI.Notify;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace CodeSanook.Swagger.Controllers
+namespace Codesanook.Swagger.Controllers
 {
     [Themed, Admin]
     public class SwaggerSettingController : Controller

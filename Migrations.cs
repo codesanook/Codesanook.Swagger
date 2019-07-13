@@ -1,8 +1,8 @@
 using Orchard.Data.Migration;
-using CodeSanook.Swagger.Models;
-using CodeSanook.Swagger.Handlers;
+using Codesanook.Swagger.Models;
+using Codesanook.Swagger.Handlers;
 
-namespace CodeSanook.Swagger
+namespace Codesanook.Swagger
 {
     public class Migrations : DataMigrationImpl
     {

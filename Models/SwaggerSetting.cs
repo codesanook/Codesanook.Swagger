@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace CodeSanook.Swagger.Models
+namespace Codesanook.Swagger.Models
 {
     public class SwaggerSetting
     {

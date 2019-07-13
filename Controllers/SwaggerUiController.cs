@@ -1,4 +1,4 @@
-﻿using CodeSanook.Swagger.Models;
+﻿using Codesanook.Swagger.Models;
 using NSwag.SwaggerGeneration.WebApi;
 using Orchard;
 using System;
@@ -12,7 +12,7 @@ using Orchard.Logging;
 using Orchard.Localization;
 using NJsonSchema;
 
-namespace CodeSanook.Swagger.Controllers
+namespace Codesanook.Swagger.Controllers
 {
     //https://github.com/RSuter/NSwag/wiki/WebApiToSwaggerGenerator
     public class SwaggerUiController : Controller

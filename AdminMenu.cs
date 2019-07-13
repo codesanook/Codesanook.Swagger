@@ -1,7 +1,7 @@
 ﻿using Orchard.Localization;
 using Orchard.UI.Navigation;
 
-namespace CodeSanook.Swagger
+namespace Codesanook.Swagger
 {
     public class AdminMenu : INavigationProvider
     {
