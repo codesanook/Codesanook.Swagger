@@ -183,9 +183,9 @@
       <Name>Orchard.Core</Name>
       <Private>false</Private>
     </ProjectReference>
-    <ProjectReference Include="..\CodeSanook.Common\CodeSanook.Common.csproj">
+    <ProjectReference Include="..\Codesanook.Common\Codesanook.Common.csproj">
       <Project>{7104e4b7-0fdc-4734-a812-1c6a8f71635d}</Project>
-      <Name>CodeSanook.Common</Name>
+      <Name>Codesanook.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
